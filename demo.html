@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deck Demo</title>
+</head>
+<body>
+  <h1>🎓 Welcome to your personalized Deck of Hospitality demo!</h1>
+  <p><strong>Demo ID:</strong> <span id="demo-id"></span></p>
+  <p>This is where your customized training experience will appear.</p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const demoId = params.get("id");
+    document.getElementById("demo-id").textContent = demoId || "No ID provided";
+  </script>
+</body>
+</html>
